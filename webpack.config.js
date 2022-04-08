@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+
 module.exports = {
   entry: {
     app: "./assets/js/script.js",
@@ -11,12 +11,15 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: __dirname + "/dist",
+    path: `${__dirname} /dist`,
+  },
+  devServer: {
+    static: "./",
   },
   module: {
     rules: [
       {
-        test: /\.jpg|\.png|\.svg|\.gif$/i,
+        test: /\.(jpe?g|png|svg|gif)$/i,
         use: [
           {
             loader: "file-loader",
@@ -25,7 +28,7 @@ module.exports = {
               name(file) {
                 return "[path][name].[ext]";
               },
-              publicPath: function (url) {
+              publicPath(url) {
                 return url.replace("../", "/assets/");
               },
             },
