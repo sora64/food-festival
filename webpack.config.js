@@ -31,7 +31,7 @@ module.exports = {
                 return "[path][name].[ext]";
               },
               publicPath(url) {
-                return url.replace("../", "/assets/");
+                return url.replace("../", "/food-festival/dist/assets/");
               },
             },
           },
