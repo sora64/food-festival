@@ -13,6 +13,7 @@ const FILES_TO_CACHE = [
   "./dist/events.bundle.js",
   "./dist/tickets.bundle.js",
   "./dist/schedule.bundle.js",
+  "./dist/assets/img/icons/",
 ];
 
 // Respond with cached resources
