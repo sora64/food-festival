@@ -1,7 +1,7 @@
 {
   "icons": [
     {
-      "src": "food-festival/dist/assets/img/icons/icon_512x512.png",
+      "src": "assets/img/icons/icon_512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
